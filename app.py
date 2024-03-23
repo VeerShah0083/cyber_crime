@@ -10,7 +10,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 # Load the trained model
-model = joblib.load(r'C:\Users\Lenovo\Desktop\Fraud_detection\sms-spam-classifier\spam_detectmodel.pkl')
+model = joblib.load(r'spam_detectmodel.pkl')
 
 # Initialize the Porter Stemmer
 ps = PorterStemmer()
@@ -39,7 +39,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 def classify_message(message):
     # Load the TfidfVectorizer
-    tfidf_vectorizer = joblib.load(r'C:\Users\Lenovo\Desktop\Fraud_detection\sms-spam-classifier\vectorizer.pkl')
+    tfidf_vectorizer = joblib.load(r'vectorizer.pkl')
     
     # Preprocess Input
     preprocessed_input = preprocess_text(message)
